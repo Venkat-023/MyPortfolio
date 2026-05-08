@@ -64,21 +64,10 @@ const Home = () => {
       system: 'Web app where users upload medical reports → RAG pipeline indexes and retrieves relevant medical context → Agentic AI analyzes longitudinal patient data, identifies worsening patterns, and provides personalized recommendations to help reduce disease progression. Backed by deep learning models (BiLSTM, BiGRU, Transformer) trained on MIMIC-IV ICU data.',
       decisions: 'Built RAG for grounding AI responses in the user\'s own medical history. Agentic AI orchestrates retrieval, trajectory analysis, and recommendation generation. Users interact conversationally — upload reports, ask questions, and track trends over time.',
       challenges: 'Handling diverse medical report formats for reliable parsing. Ensuring AI recommendations are safe and grounded in retrieved data. Building intuitive trajectory visualization so non-technical users can understand their health trends.',
-      results: { 'Platform': 'Report Upload + Trajectory Tracking', 'AI': 'RAG + Agentic Recommendations', 'Models': 'BiLSTM / BiGRU / Transformer' },
+      results: { 'AUC-ROC': '0.9096', 'Platform': 'Upload + Trajectory + AI', 'Models': 'BiLSTM / BiGRU / Transformer' },
       stack: ['RAG', 'Agentic AI', 'BiLSTM', 'Transformer', 'BiGRU', 'PyTorch', 'MIMIC-IV'],
       github: 'https://github.com/Venkat-023/Longitudinal-Temporal-Disease-Progression',
       color: 'primary',
-      pipeline: [
-        { step: '1', label: 'Report Parsing', desc: 'Upload & parse diverse medical reports into structured patient data' },
-        { step: '2', label: 'Trajectory Building', desc: '59 features × 6 timesteps sequences from longitudinal ICU visits' },
-        { step: '3', label: 'Progression Prediction', desc: 'BiLSTM, BiGRU & Transformer classify worsening vs stable' },
-        { step: '4', label: 'RAG + Agentic AI', desc: 'Retrieval-grounded recommendations to help reduce progression' },
-      ],
-      modelMetrics: [
-        { model: 'BiLSTM Attention', accuracy: '0.8134', precision: '0.4712', recall: '0.8304', f1: '0.6012', auc: '0.9021' },
-        { model: 'BiGRU', accuracy: '0.8132', precision: '0.4712', recall: '0.8404', f1: '0.6038', auc: '0.9076' },
-        { model: 'Transformer Encoder', accuracy: '0.8198', precision: '0.4814', recall: '0.8237', f1: '0.6077', auc: '0.9096' },
-      ],
     },
   ];
 
