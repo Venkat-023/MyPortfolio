@@ -60,6 +60,13 @@ const Publications = () => {
                   </div>
                 </div>
 
+                {pub.authors && (
+                  <p className="text-sm text-foreground/80"><span className="text-muted-foreground">Authors: </span>{pub.authors}</p>
+                )}
+                {pub.venue && (
+                  <p className="text-sm text-primary/90 font-medium">{pub.venue}</p>
+                )}
+
                 <p className="text-muted-foreground leading-relaxed">{pub.abstract}</p>
 
                 <div className="flex flex-wrap gap-2 pt-2">
