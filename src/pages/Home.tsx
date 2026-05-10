@@ -125,11 +125,13 @@ const Home = () => {
               { label: 'Amazon ML Hack', value: '#1693', sub: 'of 82,790 (top ~2%)' },
               { label: 'CodeWar IIT Ropar', value: '#3593', sub: 'of 32,000+ participants' },
             ].map((stat) => (
-              <div key={stat.label} className="glass-card p-5 rounded-xl border border-border/50">
-                <p className="text-2xl md:text-3xl font-display font-bold text-primary">{stat.value}</p>
-                <p className="text-sm font-medium text-foreground mt-1">{stat.label}</p>
-                <p className="text-xs text-muted-foreground mt-0.5">{stat.sub}</p>
-              </div>
+              <Tilt3D key={stat.label} max={12} scale={1.04}>
+                <div className="glass-card p-5 rounded-xl border border-border/50">
+                  <p className="text-2xl md:text-3xl font-display font-bold text-primary">{stat.value}</p>
+                  <p className="text-sm font-medium text-foreground mt-1">{stat.label}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{stat.sub}</p>
+                </div>
+              </Tilt3D>
             ))}
           </div>
         </div>
