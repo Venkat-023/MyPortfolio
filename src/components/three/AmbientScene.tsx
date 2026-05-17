@@ -26,10 +26,10 @@ const SoftBlob = ({
         emissiveIntensity={0.35}
         roughness={0.25}
         metalness={0.4}
-        distort={0.45}
-        speed={1.6}
+        distort={0.35}
+        speed={1.4}
         transparent
-        opacity={0.55}
+        opacity={0.32}
       />
     </mesh>
   </Float>
