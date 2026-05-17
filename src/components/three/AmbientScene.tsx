@@ -125,6 +125,7 @@ const DriftingStars = () => {
 };
 
 const AmbientScene = () => {
+  const nebulaTex = useMemo(() => makeNebulaTexture(), []);
   return (
     <div className="fixed inset-0 -z-10 pointer-events-none">
       <Canvas
@@ -142,12 +143,12 @@ const AmbientScene = () => {
           <DriftingStars />
           <Stars radius={40} depth={20} count={1200} factor={2} saturation={0} fade speed={0.6} />
 
-          {/* nebula clouds — large, soft, additive */}
-          <NebulaCloud position={[-7, 3, -15]} color="#0066ff" scale={7} opacity={0.16} />
-          <NebulaCloud position={[8, -2, -18]} color="#00f0ff" scale={8} opacity={0.12} />
-          <NebulaCloud position={[-4, -5, -20]} color="#ff6b35" scale={6} opacity={0.1} />
-          <NebulaCloud position={[2, 6, -22]} color="#7a3aff" scale={9} opacity={0.1} />
-
+          {/* nebula clouds — large, soft, additive sprites */}
+          <NebulaCloud texture={nebulaTex} position={[-8, 4, -15]} color="#0066ff" scale={14} opacity={0.45} />
+          <NebulaCloud texture={nebulaTex} position={[9, -3, -18]} color="#00bfff" scale={16} opacity={0.35} />
+          <NebulaCloud texture={nebulaTex} position={[-5, -6, -20]} color="#ff6b35" scale={12} opacity={0.28} />
+          <NebulaCloud texture={nebulaTex} position={[3, 7, -22]} color="#7a3aff" scale={18} opacity={0.3} />
+          <NebulaCloud texture={nebulaTex} position={[0, 0, -25]} color="#1a1a4a" scale={26} opacity={0.5} />
           {/* the wormhole / black hole centerpiece — far away, top-right */}
           <Wormhole />
 
