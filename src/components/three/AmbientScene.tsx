@@ -91,23 +91,25 @@ const NebulaCloud = ({
   position,
   color,
   scale = 6,
-  opacity = 0.18,
+  opacity = 0.4,
+  texture,
 }: {
   position: [number, number, number];
   color: string;
   scale?: number;
   opacity?: number;
+  texture: THREE.Texture;
 }) => (
-  <mesh position={position} scale={scale}>
-    <sphereGeometry args={[1, 32, 32]} />
-    <meshBasicMaterial
+  <sprite position={position} scale={[scale, scale, scale]}>
+    <spriteMaterial
+      map={texture}
       color={color}
       transparent
       opacity={opacity}
       blending={THREE.AdditiveBlending}
       depthWrite={false}
     />
-  </mesh>
+  </sprite>
 );
 
 const DriftingStars = () => {
