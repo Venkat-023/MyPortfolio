@@ -191,7 +191,6 @@ const Resume = () => {
         </Tilt3D>
       </div>
     </div>
-    </div>
   );
 };
 
