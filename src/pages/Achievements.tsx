@@ -1,4 +1,5 @@
-import { Trophy, Award, GraduationCap, Shield, Code2, Brain, Cpu, Cloud, FileText, ExternalLink } from 'lucide-react';
+import { Trophy, Award, GraduationCap, Shield, Code2, Brain, Cpu, Cloud, FileText, ExternalLink, Heart, Users } from 'lucide-react';
+import Tilt3D from '@/components/three/Tilt3D';
 
 const Achievements = () => {
   const conferences = [
@@ -39,6 +40,33 @@ const Achievements = () => {
       date: 'Apr 2026',
     },
     {
+      title: 'Built With AI Hackathon',
+      org: 'Unstop',
+      result: 'Built DocOps-AI',
+      description: 'Built DocOps-AI, an AI document operations project for document processing, extraction, summarization, and workflow assistance. Deployed on Hugging Face Spaces.',
+      date: '2026',
+      highlight: true,
+      link: 'https://github.com/Venkat-023/DocOps-AI',
+    },
+    {
+      title: 'Google Gemma 4 Hackathon',
+      org: 'Google Gemma',
+      result: 'Built Insight Weaver',
+      description: 'Built Insight Weaver, a Gemma + Ollama powered scientific discovery copilot with evidence cleaning, entity extraction, knowledge graphs, GraphRAG, contradiction analysis, and hypotheses.',
+      date: '2026',
+      highlight: true,
+      link: 'https://github.com/Venkat-023/Insight-Weaver',
+    },
+    {
+      title: 'Meta OpenEnv Hackathon',
+      org: 'Meta OpenEnv',
+      result: 'Built AI First Minute',
+      description: 'Built AI First Minute, an emergency first-response decision environment for evaluating AI agents supporting non-expert first responders. Deployed on Hugging Face Spaces.',
+      date: '2026',
+      highlight: true,
+      link: 'https://github.com/Venkat-023/Ai_First_Minute',
+    },
+    {
       title: 'CodeWar — IIT Ropar',
       org: 'IIT Ropar (CodeChef)',
       result: 'Rank #3593 / 32,000+',
@@ -49,9 +77,11 @@ const Achievements = () => {
     {
       title: 'AWS Summit',
       org: 'Amazon Web Services (AWS)',
-      result: 'Participant',
-      description: 'AWS Summit focused on cloud computing technologies and services.',
-      date: 'Mar 2025',
+      result: 'Selected Attendee',
+      description: 'Selected to attend AWS Summit 2026, focused on cloud computing, artificial intelligence, modern infrastructure, and AWS builder ecosystems.',
+      date: '2026',
+      highlight: true,
+      link: 'https://www.linkedin.com/posts/venkat-baba-yemineni-49a7612b4_awssummit-cloudcomputing-artificialintelligence-ugcPost-7454384782119018496-YLoc/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEuTA3YBtKXkRvQ4qp0EdqsKhy16Bz2w33k',
     },
     {
       title: 'Kharagpur Data Science Hackathon',
@@ -81,6 +111,36 @@ const Achievements = () => {
       description: 'Semifinalist in the RIFT \'26 Hackathon organized by PhysicsWallah. Credential ID: 99d629c0-658e-4d1f-a2e3-166541c78c3c',
       date: 'Feb 2026',
       highlight: true,
+    },
+    {
+      title: 'Adivya 2.0',
+      org: 'IIT Ropar',
+      result: 'Semifinalist',
+      description: 'Built SkillQuest AI, a gamified AI learning platform with adaptive assessments and tutoring.',
+      date: '2026',
+      highlight: true,
+      link: 'https://github.com/Venkat-023/SkillQuest-Ai',
+    },
+  ];
+
+  const community = [
+    {
+      title: 'Volunteer Teacher - U&I',
+      org: 'U&I',
+      description: 'Mentoring underprivileged and orphaned students through weekly academic support sessions.',
+      icon: <Heart className="w-6 h-6 text-accent" />,
+    },
+    {
+      title: 'Fundraising & Volunteer Team Lead',
+      org: 'Community education support',
+      description: 'Led fundraising initiatives and volunteer teams to support students\' educational expenses and learning resources.',
+      icon: <Users className="w-6 h-6 text-primary" />,
+    },
+    {
+      title: 'NSS Coordinator',
+      org: 'National Service Scheme',
+      description: 'Organizing workshops and coordinating volunteers, logistics, and campus events.',
+      icon: <Shield className="w-6 h-6 text-secondary" />,
     },
   ];
 
@@ -168,34 +228,38 @@ const Achievements = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {conferences.map((conf, index) => (
-              <div
+              <Tilt3D
                 key={index}
-                className="glass-card p-6 rounded-2xl hover-lift transition-all animate-fade-in border-2 border-primary/50"
+                max={5}
+                scale={1.015}
+                className="h-full animate-fade-in"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-primary/20 flex-shrink-0">
-                    <Award className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-start justify-between gap-2">
-                      <h3 className="text-lg font-display font-bold text-foreground">{conf.title}</h3>
-                      <span className="text-xs text-muted-foreground whitespace-nowrap">{conf.date}</span>
+                <div className="glass-card p-6 rounded-2xl hover-lift transition-all border-2 border-primary/50 h-full">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-xl bg-primary/20 flex-shrink-0">
+                      <Award className="w-6 h-6 text-primary" />
                     </div>
-                    <p className="text-sm text-primary font-medium mt-1">{conf.org}</p>
-                    <span className="inline-block mt-2 px-3 py-1 rounded-full text-xs font-bold bg-primary/20 text-primary border border-primary/30">
-                      {conf.result}
-                    </span>
-                    <p className="text-sm text-muted-foreground mt-2">{conf.description}</p>
-                    {conf.link && (
-                      <a href={conf.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary/80 transition-colors mt-3">
-                        <ExternalLink className="w-4 h-4" />
-                        View Post
-                      </a>
-                    )}
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between gap-2">
+                        <h3 className="text-lg font-display font-bold text-foreground">{conf.title}</h3>
+                        <span className="text-xs text-muted-foreground whitespace-nowrap">{conf.date}</span>
+                      </div>
+                      <p className="text-sm text-primary font-medium mt-1">{conf.org}</p>
+                      <span className="inline-block mt-2 px-3 py-1 rounded-full text-xs font-bold bg-primary/20 text-primary border border-primary/30">
+                        {conf.result}
+                      </span>
+                      <p className="text-sm text-muted-foreground mt-2">{conf.description}</p>
+                      {conf.link && (
+                        <a href={conf.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary/80 transition-colors mt-3">
+                          <ExternalLink className="w-4 h-4" />
+                          View Post
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Tilt3D>
             ))}
           </div>
         </div>
@@ -208,42 +272,80 @@ const Achievements = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {hackathons.map((hack, index) => (
-              <div
+              <Tilt3D
                 key={index}
-                className={`glass-card p-6 rounded-2xl hover-lift transition-all animate-fade-in ${
-                  hack.highlight ? 'border-2 border-accent/50' : 'border border-border/50'
-                }`}
+                max={5}
+                scale={1.015}
+                className="h-full animate-fade-in"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className="flex items-start gap-4">
-                  <div className={`p-3 rounded-xl ${hack.highlight ? 'bg-accent/20' : 'bg-primary/10'} flex-shrink-0`}>
-                    {hack.highlight ? (
-                      <Trophy className="w-6 h-6 text-accent" />
-                    ) : (
-                      <Award className="w-6 h-6 text-primary" />
-                    )}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-start justify-between gap-2">
-                      <h3 className="text-lg font-display font-bold text-foreground">{hack.title}</h3>
-                      <span className="text-xs text-muted-foreground whitespace-nowrap">{hack.date}</span>
+                <div
+                  className={`glass-card p-6 rounded-2xl hover-lift transition-all h-full ${
+                    hack.highlight ? 'border-2 border-accent/50' : 'border border-border/50'
+                  }`}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className={`p-3 rounded-xl ${hack.highlight ? 'bg-accent/20' : 'bg-primary/10'} flex-shrink-0`}>
+                      {hack.highlight ? (
+                        <Trophy className="w-6 h-6 text-accent" />
+                      ) : (
+                        <Award className="w-6 h-6 text-primary" />
+                      )}
                     </div>
-                    <p className="text-sm text-primary font-medium mt-1">{hack.org}</p>
-                    {hack.result !== 'Participant' && hack.result !== 'Participation Certificate' && hack.result !== 'Certificate Participant' && (
-                      <span className="inline-block mt-2 px-3 py-1 rounded-full text-xs font-bold bg-accent/20 text-accent border border-accent/30">
-                        {hack.result}
-                      </span>
-                    )}
-                    <p className="text-sm text-muted-foreground mt-2">{hack.description}</p>
-                    {'link' in hack && (hack as any).link && (
-                      <a href={(hack as any).link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary/80 transition-colors mt-3">
-                        <ExternalLink className="w-4 h-4" />
-                        View Project
-                      </a>
-                    )}
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between gap-2">
+                        <h3 className="text-lg font-display font-bold text-foreground">{hack.title}</h3>
+                        <span className="text-xs text-muted-foreground whitespace-nowrap">{hack.date}</span>
+                      </div>
+                      <p className="text-sm text-primary font-medium mt-1">{hack.org}</p>
+                      {hack.result !== 'Participant' && hack.result !== 'Participation Certificate' && hack.result !== 'Certificate Participant' && (
+                        <span className="inline-block mt-2 px-3 py-1 rounded-full text-xs font-bold bg-accent/20 text-accent border border-accent/30">
+                          {hack.result}
+                        </span>
+                      )}
+                      <p className="text-sm text-muted-foreground mt-2">{hack.description}</p>
+                      {'link' in hack && (hack as any).link && (
+                        <a href={(hack as any).link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary/80 transition-colors mt-3">
+                          <ExternalLink className="w-4 h-4" />
+                          View Details
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Tilt3D>
+            ))}
+          </div>
+        </div>
+
+        {/* Community & Leadership */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-display font-bold mb-8 text-gradient-cyan flex items-center gap-3">
+            <Users className="w-8 h-8 text-primary" />
+            Community & Leadership
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {community.map((item, index) => (
+              <Tilt3D
+                key={index}
+                max={5}
+                scale={1.015}
+                className="h-full animate-fade-in"
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                <div className="glass-card p-6 rounded-2xl hover-lift border border-border/50 hover:border-primary/50 transition-all h-full">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-xl bg-muted/50 flex-shrink-0">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-display font-bold text-foreground">{item.title}</h3>
+                      <p className="text-sm text-primary font-medium mt-1">{item.org}</p>
+                      <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </Tilt3D>
             ))}
           </div>
         </div>
@@ -256,39 +358,43 @@ const Achievements = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
-              <div
+              <Tilt3D
                 key={index}
-                className="glass-card p-6 rounded-2xl hover-lift border border-border/50 hover:border-primary/50 transition-all animate-fade-in"
+                max={5}
+                scale={1.015}
+                className="h-full animate-fade-in"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-muted/50">
-                      {getCategoryIcon(cert.category)}
+                <div className="glass-card p-6 rounded-2xl hover-lift border border-border/50 hover:border-primary/50 transition-all h-full">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 rounded-lg bg-muted/50">
+                        {getCategoryIcon(cert.category)}
+                      </div>
+                      <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{cert.category}</span>
                     </div>
-                    <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{cert.category}</span>
+                    <h3 className="text-base font-display font-bold text-foreground">{cert.title}</h3>
+                    <p className="text-sm text-primary font-medium">{cert.issuer}</p>
+                    <p className="text-xs text-muted-foreground">Issued {cert.date}</p>
+                    <div className="flex flex-wrap gap-1.5 pt-2">
+                      {cert.skills.map((skill, idx) => (
+                        <span
+                          key={idx}
+                          className="px-2 py-0.5 text-xs bg-muted/50 text-foreground rounded-full border border-border/50"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                    {cert.link && (
+                      <a href={cert.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-primary/80 transition-colors mt-1">
+                        <ExternalLink className="w-3 h-3" />
+                        View Credential
+                      </a>
+                    )}
                   </div>
-                  <h3 className="text-base font-display font-bold text-foreground">{cert.title}</h3>
-                  <p className="text-sm text-primary font-medium">{cert.issuer}</p>
-                  <p className="text-xs text-muted-foreground">Issued {cert.date}</p>
-                  <div className="flex flex-wrap gap-1.5 pt-2">
-                    {cert.skills.map((skill, idx) => (
-                      <span
-                        key={idx}
-                        className="px-2 py-0.5 text-xs bg-muted/50 text-foreground rounded-full border border-border/50"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                  {cert.link && (
-                    <a href={cert.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-primary/80 transition-colors mt-1">
-                      <ExternalLink className="w-3 h-3" />
-                      View Credential
-                    </a>
-                  )}
                 </div>
-              </div>
+              </Tilt3D>
             ))}
           </div>
         </div>

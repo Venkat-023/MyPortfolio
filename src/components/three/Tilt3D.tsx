@@ -1,4 +1,4 @@
-import { useRef, ReactNode, MouseEvent } from 'react';
+import { useRef, ReactNode, MouseEvent, CSSProperties } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -6,13 +6,14 @@ interface Props {
   max?: number; // max tilt in degrees
   glare?: boolean;
   scale?: number;
+  style?: CSSProperties;
 }
 
 /**
  * Mouse-driven 3D tilt wrapper. Pure CSS transforms — no extra deps.
  * Adds depth/perspective so any child card feels like a physical 3D surface.
  */
-const Tilt3D = ({ children, className = '', max = 10, glare = true, scale = 1.02 }: Props) => {
+const Tilt3D = ({ children, className = '', max = 10, glare = true, scale = 1.02, style }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   const glareRef = useRef<HTMLDivElement>(null);
 
@@ -44,7 +45,7 @@ const Tilt3D = ({ children, className = '', max = 10, glare = true, scale = 1.02
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
       className={`relative transition-transform duration-200 ease-out will-change-transform ${className}`}
-      style={{ transformStyle: 'preserve-3d' }}
+      style={{ transformStyle: 'preserve-3d', ...style }}
     >
       {children}
       {glare && (

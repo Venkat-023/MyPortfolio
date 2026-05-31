@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Github, ExternalLink, Eye, Brain, Hand, Shield, Activity, Leaf, Cpu, BarChart3, Heart, Microscope, Zap, Film, Cloud, Gamepad2, Bot, FlaskConical } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Tilt3D from '@/components/three/Tilt3D';
 
 type Project = {
   title: string;
@@ -27,13 +28,30 @@ const Projects = () => {
       demo: 'https://www.linkedin.com/posts/venkat-baba-yemineni-49a7612b4_driver-drowsiness-detection-using-cnn-ugcPost-7357011125185454082-OEYC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEuTA3YBtKXkRvQ4qp0EdqsKhy16Bz2w33k',
     },
     {
-      title: 'KCET Rank Predictor & College Recommender',
-      description: 'End-to-end ML system with FastAPI REST APIs and Streamlit UI. Dockerized deployment with ML inference and college recommendation engine.',
-      techStack: ['Python', 'FastAPI', 'Streamlit', 'Docker', 'scikit-learn'],
-      github: 'https://github.com/Venkat-023/kcet-rank-college-advisor-platform',
+      title: 'Insight Weaver - Scientific Discovery Copilot',
+      description: 'Built for the Google Gemma 4 Hackathon: evidence-first scientific discovery copilot that turns PDFs into entities, knowledge graphs, GraphRAG answers, contradiction analysis, and testable hypotheses.',
+      techStack: ['Gemma', 'Ollama', 'FastAPI', 'React', 'Docker', 'GraphRAG', 'ChromaDB'],
+      github: 'https://github.com/Venkat-023/Insight-Weaver',
       category: 'Full Stack ML',
-      highlight: 'Dockerized',
-      demo: 'https://kcet-rank-prediction-college-tolm.onrender.com/',
+      highlight: 'Google Gemma 4',
+      demo: 'https://www.linkedin.com/posts/venkat-baba-yemineni-49a7612b4_google-gemma-gemma4-ugcPost-7462508909518303233-0cY9/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEuTA3YBtKXkRvQ4qp0EdqsKhy16Bz2w33k',
+    },
+    {
+      title: 'DocOps-AI',
+      description: 'Built for the Built With AI Hackathon on Unstop: an AI document operations system for document processing, extraction, summarization, and workflow assistance. Deployed on Hugging Face Spaces.',
+      techStack: ['Python', 'AI', 'NLP', 'Hugging Face', 'Document AI'],
+      github: 'https://github.com/Venkat-023/DocOps-AI',
+      category: 'NLP',
+      highlight: 'Built With AI',
+      demo: 'https://huggingface.co/spaces/Venkat-023/DocOps-AI',
+    },
+    {
+      title: 'SkillQuest AI',
+      description: 'Built for Adivya 2.0 at IIT Ropar: a gamified AI learning platform with adaptive assessments, tutoring flows, and personalized skill-building paths.',
+      techStack: ['AI', 'EdTech', 'Gamification', 'Adaptive Learning', 'React'],
+      github: 'https://github.com/Venkat-023/SkillQuest-Ai',
+      category: 'Full Stack ML',
+      highlight: 'Adivya 2.0',
     },
     {
       title: 'TACOS — Toxic Comment Moderation',
@@ -55,11 +73,12 @@ const Projects = () => {
     },
     // Reinforcement Learning
     {
-      title: 'OpenEnv Reinforcement Learning',
-      description: 'Emergency First-Response Decision Engine — a deterministic OpenEnv-compatible environment for evaluating AI agents supporting non-expert first responders.',
-      techStack: ['Python', 'Reinforcement Learning', 'OpenAI Gym'],
-      github: 'https://github.com/Venkat-023/OpenEnv-ReinforcementLearning',
+      title: 'AI First Minute',
+      description: 'Built for the Meta OpenEnv Hackathon: an emergency first-response decision environment for evaluating AI agents supporting non-expert first responders. Deployed on Hugging Face Spaces.',
+      techStack: ['Python', 'OpenEnv', 'Reinforcement Learning', 'FastAPI', 'Hugging Face'],
+      github: 'https://github.com/Venkat-023/Ai_First_Minute',
       category: 'Reinforcement Learning',
+      highlight: 'Meta OpenEnv',
       demo: 'https://huggingface.co/spaces/Venkat-023/Ai_First_Minute',
     },
     // Deep Learning & Time Series
@@ -69,6 +88,14 @@ const Projects = () => {
       techStack: ['TensorFlow', 'LSTM', 'GRU', 'Transformer', 'Pandas'],
       github: 'https://github.com/Venkat-023/Deep-Sequential-Based-Stock-Price-Prediction',
       category: 'Deep Learning',
+    },
+    {
+      title: 'Mudra Recognition System',
+      description: 'Computer vision system for recognizing Indian classical hand mudras using image processing and deep learning classification.',
+      techStack: ['Python', 'TensorFlow', 'OpenCV', 'Computer Vision', 'CNN'],
+      github: 'https://github.com/Venkat-023/Mudra-Recognition-System',
+      category: 'Computer Vision',
+      highlight: 'Gesture AI',
     },
     // NLP & AI Tools
     {
@@ -291,66 +318,70 @@ const Projects = () => {
         {/* Project Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project, index) => (
-            <div
+            <Tilt3D
               key={index}
-              className="glass-card p-6 rounded-2xl hover-lift group border border-border/50 hover:border-primary/50 transition-all animate-fade-in flex flex-col"
+              max={5}
+              scale={1.015}
+              className="h-full animate-fade-in"
               style={{ animationDelay: `${(index % 9) * 0.05}s` }}
             >
-              <div className="flex-1 space-y-4">
-                {/* Category & Highlight */}
-                <div className="flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
-                    {getCategoryIcon(project.category)}
-                    {project.category}
-                  </span>
-                  {project.highlight && (
-                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-accent/20 text-accent border border-accent/30">
-                      {project.highlight}
+              <div className="glass-card p-6 rounded-2xl hover-lift group border border-border/50 hover:border-primary/50 transition-all flex flex-col h-full">
+                <div className="flex-1 space-y-4">
+                  {/* Category & Highlight */}
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
+                      {getCategoryIcon(project.category)}
+                      {project.category}
                     </span>
-                  )}
+                    {project.highlight && (
+                      <span className="px-3 py-1 rounded-full text-xs font-bold bg-accent/20 text-accent border border-accent/30">
+                        {project.highlight}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-lg font-display font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
+                    {project.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.techStack.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2 py-0.5 text-xs font-medium bg-muted/50 text-foreground rounded-full border border-border/50"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-lg font-display font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
-                  {project.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {project.description}
-                </p>
-
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-1.5">
-                  {project.techStack.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="px-2 py-0.5 text-xs font-medium bg-muted/50 text-foreground rounded-full border border-border/50"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="pt-4 mt-4 border-t border-border/30 flex gap-2">
-                <Button asChild size="sm" className="flex-1 bg-primary hover:bg-primary/90">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2" size={16} />
-                    GitHub
-                  </a>
-                </Button>
-                {project.demo && (
-                  <Button asChild size="sm" variant="outline" className="flex-1 border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2" size={16} />
-                      Demo
+                {/* Action Buttons */}
+                <div className="pt-4 mt-4 border-t border-border/30 flex gap-2">
+                  <Button asChild size="sm" className="flex-1 bg-primary hover:bg-primary/90">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2" size={16} />
+                      GitHub
                     </a>
                   </Button>
-                )}
+                  {project.demo && (
+                    <Button asChild size="sm" variant="outline" className="flex-1 border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2" size={16} />
+                        Demo
+                      </a>
+                    </Button>
+                  )}
+                </div>
               </div>
-            </div>
+            </Tilt3D>
           ))}
         </div>
 

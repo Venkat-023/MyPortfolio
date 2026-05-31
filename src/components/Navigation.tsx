@@ -16,6 +16,7 @@ const Navigation = () => {
 
   const navLinks = [
     { to: '/', label: 'Home' },
+    { to: '/experience', label: 'Experience' },
     { to: '/resume', label: 'Resume' },
     { to: '/projects', label: 'Projects' },
     { to: '/achievements', label: 'Achievements' },
@@ -37,7 +38,7 @@ const Navigation = () => {
           </NavLink>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-4 lg:gap-6">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}

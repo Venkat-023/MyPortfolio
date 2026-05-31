@@ -33,7 +33,11 @@ const Biodata = () => {
               </tr>
               <tr className="border-b border-border/50">
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">Education</td>
-                <td className="py-4 text-foreground">B.E. Computer Science, RV Institute of Technology (2023-2027)</td>
+                <td className="py-4 text-foreground">B.E. Computer Science, RV Institute of Technology (2023-2027), CGPA 8.23</td>
+              </tr>
+              <tr className="border-b border-border/50">
+                <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">Experience</td>
+                <td className="py-4 text-foreground">AI Intern at GoAi, paid internship (June 2026 - December 2026)</td>
               </tr>
               <tr className="border-b border-border/50">
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">Specialization</td>
@@ -49,17 +53,19 @@ const Biodata = () => {
               </tr>
               <tr className="border-b border-border/50">
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">LeetCode</td>
-                <td className="py-4 text-foreground">870+ Problems Solved</td>
+                <td className="py-4 text-foreground">900+ Problems Solved</td>
               </tr>
               <tr className="border-b border-border/50">
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">GitHub</td>
-                <td className="py-4 text-foreground">30+ ML/AI Projects</td>
+                <td className="py-4 text-foreground">25+ AI/ML Projects</td>
               </tr>
               <tr className="border-b border-border/50">
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">Key Achievements</td>
                 <td className="py-4 text-foreground">
                   Amazon ML Hackathon 2025 — Rank #1693 / 82,790<br />
-                  CodeWar IIT Ropar — Rank #3593 / 32,000+
+                  CodeWar IIT Ropar — Rank #3593 / 32,000+<br />
+                  RIFT '26 — Semifinalist<br />
+                  Adivya 2.0 at IIT Ropar — Semifinalist
                 </td>
               </tr>
               <tr className="border-b border-border/50">
@@ -68,7 +74,7 @@ const Biodata = () => {
               </tr>
               <tr className="border-b border-border/50">
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">Volunteer</td>
-                <td className="py-4 text-foreground">Volunteer Teacher at U&I for underprivileged students</td>
+                <td className="py-4 text-foreground">Volunteer Teacher at U&I; NSS Coordinator; fundraising and volunteer team leadership</td>
               </tr>
               <tr>
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">LinkedIn</td>

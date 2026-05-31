@@ -9,7 +9,7 @@ const Home = () => {
   const [projectCount, setProjectCount] = useState(0);
 
   useEffect(() => {
-    const targets = { leetcode: 870, projects: 30 };
+    const targets = { leetcode: 900, projects: 25 };
     const duration = 2000;
     const steps = 60;
     let currentStep = 0;
@@ -36,15 +36,15 @@ const Home = () => {
       color: 'primary',
     },
     {
-      title: 'KCET Rank Prediction & College Recommender',
-      problem: 'Karnataka CET students have no reliable tool to predict rank or find colleges matching their score — causing poor decisions during counseling.',
-      system: 'ML pipeline with feature engineering from historical KCET data → FastAPI backend with normalization and post-prediction calibration → Streamlit UI for interactive exploration → Fully containerized with independent Docker images.',
-      decisions: 'Used ensemble regressors (XGBoost + Gradient Boosting) over neural nets — better interpretability and lower latency for tabular data. Separated model serving from UI for independent scaling.',
-      challenges: 'Historical data had inconsistent formatting across years. Built custom preprocessing pipeline. Post-prediction calibration handled edge cases at rank boundaries.',
-      results: { 'Deployment': 'Live on Render', 'Architecture': 'FastAPI + Streamlit + Docker', 'Data': 'Multi-year KCET records' },
-      stack: ['Python', 'FastAPI', 'Streamlit', 'Docker', 'XGBoost', 'scikit-learn'],
-      github: 'https://github.com/Venkat-023/kcet-rank-college-advisor-platform',
-      demo: 'https://kcet-rank-prediction-college-tolm.onrender.com/',
+      title: 'Insight Weaver - Scientific Discovery Copilot',
+      problem: 'Researchers need more than PDF search or generic summaries. A research question often spans papers with different methods, claims, datasets, limitations, contradictions, and unexplored entity connections.',
+      system: 'PDF ingestion -> scientific text cleaning -> section-aware chunks -> pattern NER entities -> SQL/optional Neo4j graph -> BM25/vector retrieval -> GraphRAG answers and Gemma reasoning through Ollama.',
+      decisions: 'Made the LLM the final reasoning layer, not the first parser. Every answer is grounded in cleaned evidence, extracted entities, graph context, relationships, gaps, and workspace-scoped paper records.',
+      challenges: 'Fixed noisy PDF artifacts, scientific sentence boundaries, title/author parsing, section detection, weak entity extraction, GraphRAG chunk deduplication, lexical retrieval noise, and public demo privacy.',
+      results: { 'Pipeline': 'Evidence -> Graph -> GraphRAG', 'Privacy': 'Per-browser workspace isolation', 'Runtime': 'Gemma + Ollama + Docker' },
+      stack: ['Gemma', 'Ollama', 'FastAPI', 'React', 'Docker', 'GraphRAG', 'ChromaDB'],
+      github: 'https://github.com/Venkat-023/Insight-Weaver',
+      demo: 'https://www.linkedin.com/posts/venkat-baba-yemineni-49a7612b4_google-gemma-gemma4-ugcPost-7462508909518303233-0cY9/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEuTA3YBtKXkRvQ4qp0EdqsKhy16Bz2w33k',
       color: 'accent',
     },
     {
@@ -82,7 +82,7 @@ const Home = () => {
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Open to AI / Backend internships & roles
+            AI Intern at GoAi - open to AI / Backend roles
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.08] text-foreground mb-6">
@@ -91,7 +91,7 @@ const Home = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
-            Deployed FastAPI-served models in Docker, trained on 2M+ samples, engineered end-to-end inference APIs. {leetcodeCount}+ LeetCode problems. {projectCount}+ ML/AI projects shipped.
+            Deployed FastAPI-served models in Docker, trained on 2M+ samples, engineered end-to-end inference APIs. {leetcodeCount}+ LeetCode problems. {projectCount}+ AI/ML projects shipped.
           </p>
 
           <div className="flex flex-wrap justify-center gap-3">
@@ -119,7 +119,7 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
             {[
               { label: 'LeetCode Solved', value: `${leetcodeCount}+`, sub: 'Sustained algorithmic consistency' },
-              { label: 'ML/AI Projects', value: `${projectCount}+`, sub: 'End-to-end deployed systems' },
+              { label: 'AI/ML Projects', value: `${projectCount}+`, sub: 'REST APIs, Docker, AWS deployments' },
               { label: 'Amazon ML Hack', value: '#1693', sub: 'of 82,790 (top ~2%)' },
               { label: 'CodeWar IIT Ropar', value: '#3593', sub: 'of 32,000+ participants' },
             ].map((stat) => (
@@ -133,6 +133,34 @@ const Home = () => {
             ))}
           </div>
         </div>
+        </div>
+      </section>
+
+      {/* ===== EXPERIENCE ===== */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+              Experience
+            </h2>
+            <p className="text-muted-foreground mt-2">Current professional AI engineering work</p>
+          </div>
+
+          <div className="glass-card p-6 md:p-8 rounded-2xl border border-primary/30">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+              <div className="flex items-start gap-4">
+                <Briefcase className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl md:text-2xl font-display font-bold text-foreground">AI Intern - GoAi</h3>
+                  <p className="text-primary font-semibold">Paid Internship</p>
+                  <p className="text-sm text-muted-foreground mt-2 max-w-2xl">
+                    Working on applied AI systems, model-backed product features, and production-oriented AI workflows across research, implementation, testing, and deployment support.
+                  </p>
+                </div>
+              </div>
+              <span className="text-sm text-muted-foreground whitespace-nowrap">June 2026 - December 2026</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -430,7 +458,7 @@ const Home = () => {
               <div className="flex items-start gap-4">
                 <Code2 className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-display font-bold text-lg text-foreground">870+ LeetCode Problems</p>
+                  <p className="font-display font-bold text-lg text-foreground">900+ LeetCode Problems</p>
                   <p className="text-primary font-bold">Sustained algorithmic consistency</p>
                   <p className="text-sm text-muted-foreground mt-1">Not a one-time grind — reflects sustained problem decomposition across arrays, graphs, DP, trees, and system design patterns.</p>
                 </div>
@@ -483,7 +511,7 @@ const Home = () => {
                 LinkedIn
               </Button>
             </a>
-            <a href="mailto:venkatbaba23@gmail.com">
+            <a href="mailto:venkatbaba23@gmail.com?subject=Portfolio%20Contact&body=Hi%20Venkat%2C%0A%0AI%20saw%20your%20portfolio%20and%20wanted%20to%20connect.">
               <Button size="lg" variant="outline" className="border-accent/50 text-accent hover:bg-accent/10">
                 Email Me
               </Button>

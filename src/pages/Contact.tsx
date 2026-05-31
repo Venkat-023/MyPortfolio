@@ -16,9 +16,14 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const subject = encodeURIComponent(formData.subject || 'Portfolio contact');
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    );
+    window.location.href = `mailto:venkatbaba23@gmail.com?subject=${subject}&body=${body}`;
     toast({
-      title: 'Message Sent!',
-      description: "Thank you for reaching out. I'll get back to you soon.",
+      title: 'Opening Email App',
+      description: 'Your message has been prepared. Please send it from your email app.',
     });
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
@@ -35,7 +40,7 @@ const Contact = () => {
             Get In Touch
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Actively looking for internships and ML/backend roles where I can build and scale real-world systems.
+            AI Intern at GoAi and actively looking for ML/backend roles where I can build and scale real-world systems.
           </p>
         </div>
 
@@ -94,12 +99,12 @@ const Contact = () => {
               <div className="space-y-4">
                 <a href="https://github.com/Venkat-023?tab=repositories" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-muted/30 hover:bg-primary/10 border border-border hover:border-primary transition-all group">
                   <Github className="w-8 h-8 text-primary" />
-                  <div className="flex-1"><p className="font-semibold text-foreground">GitHub</p><p className="text-sm text-muted-foreground">30+ ML/AI Projects</p></div>
+                  <div className="flex-1"><p className="font-semibold text-foreground">GitHub</p><p className="text-sm text-muted-foreground">25+ AI/ML Projects</p></div>
                   <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </a>
                 <a href="https://leetcode.com/u/Venkat_Baba/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-muted/30 hover:bg-accent/10 border border-border hover:border-accent transition-all group">
                   <Code2 className="w-8 h-8 text-accent" />
-                  <div className="flex-1"><p className="font-semibold text-foreground">LeetCode</p><p className="text-sm text-muted-foreground">870+ Problems Solved</p></div>
+                  <div className="flex-1"><p className="font-semibold text-foreground">LeetCode</p><p className="text-sm text-muted-foreground">900+ Problems Solved</p></div>
                   <span className="text-accent opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </a>
                 <a href="https://www.linkedin.com/in/venkat-baba-yemineni-49a7612b4" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-muted/30 hover:bg-secondary/10 border border-border hover:border-secondary transition-all group">

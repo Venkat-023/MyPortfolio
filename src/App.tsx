@@ -4,11 +4,12 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
-import AmbientScene from "./components/three/AmbientScene";
+import ParticleBackground from "./components/ParticleBackground";
 import Home from "./pages/Home";
 import Resume from "./pages/Resume";
 import Biodata from "./pages/Biodata";
 import Projects from "./pages/Projects";
+import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Achievements from "./pages/Achievements";
 import Publications from "./pages/Publications";
@@ -23,12 +24,13 @@ const App = () => (
       <Sonner />
       <BrowserRouter basename={import.meta.env.BASE_URL}>
         <div className="relative min-h-screen">
-          <AmbientScene />
+          <ParticleBackground />
           <Navigation />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/biodata" element={<Biodata />} />
+            <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/achievements" element={<Achievements />} />
             <Route path="/publications" element={<Publications />} />
