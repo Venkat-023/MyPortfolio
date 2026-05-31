@@ -40,7 +40,7 @@ const Contact = () => {
             Get In Touch
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            AI Intern at GoAi and actively looking for ML/backend roles where I can build and scale real-world systems.
+            Have a project, collaboration, or opportunity in mind? Send a message and I will get back to you.
           </p>
         </div>
 

@@ -82,7 +82,7 @@ const Home = () => {
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            AI Intern at GoAi - open to AI / Backend roles
+            AI Systems Engineer - ML and Backend Builder
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.08] text-foreground mb-6">
@@ -133,34 +133,6 @@ const Home = () => {
             ))}
           </div>
         </div>
-        </div>
-      </section>
-
-      {/* ===== EXPERIENCE ===== */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-              Experience
-            </h2>
-            <p className="text-muted-foreground mt-2">Current professional AI engineering work</p>
-          </div>
-
-          <div className="glass-card p-6 md:p-8 rounded-2xl border border-primary/30">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-              <div className="flex items-start gap-4">
-                <Briefcase className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl md:text-2xl font-display font-bold text-foreground">AI Intern - GoAi</h3>
-                  <p className="text-primary font-semibold">Paid Internship</p>
-                  <p className="text-sm text-muted-foreground mt-2 max-w-2xl">
-                    Working on applied AI systems, model-backed product features, and production-oriented AI workflows across research, implementation, testing, and deployment support.
-                  </p>
-                </div>
-              </div>
-              <span className="text-sm text-muted-foreground whitespace-nowrap">June 2026 - December 2026</span>
-            </div>
-          </div>
         </div>
       </section>
 
