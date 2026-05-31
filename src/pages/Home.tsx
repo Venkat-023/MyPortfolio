@@ -462,35 +462,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ===== CTA ===== */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="max-w-3xl mx-auto text-center glass-card p-10 rounded-2xl border border-primary/20">
-          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4">
-            Let's build something real.
-          </h2>
-          <p className="text-muted-foreground text-lg mb-8">
-            Looking for ML / Backend roles where I can design and deploy real-world systems.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground glow-cyan">
-                Get in Touch
-              </Button>
-            </Link>
-            <a href="https://www.linkedin.com/in/venkat-baba-yemineni-49a7612b4" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-secondary/50 text-secondary hover:bg-secondary/10">
-                <Linkedin className="mr-2" size={20} />
-                LinkedIn
-              </Button>
-            </a>
-            <a href="mailto:venkatbaba23@gmail.com?subject=Portfolio%20Contact&body=Hi%20Venkat%2C%0A%0AI%20saw%20your%20portfolio%20and%20wanted%20to%20connect.">
-              <Button size="lg" variant="outline" className="border-accent/50 text-accent hover:bg-accent/10">
-                Email Me
-              </Button>
-            </a>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
