@@ -54,8 +54,10 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['"Times New Roman"', 'Times', 'serif'],
-        display: ['"Times New Roman"', 'Times', 'serif'],
+        sans: ['"Rajdhani"', 'system-ui', 'sans-serif'],
+        display: ['"Orbitron"', '"Rajdhani"', 'sans-serif'],
+        mono: ['"Share Tech Mono"', 'ui-monospace', 'monospace'],
+        hero: ['"Audiowide"', '"Orbitron"', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -63,26 +65,42 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+        "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
+        "accordion-up": { from: { height: "var(--radix-accordion-content-height)" }, to: { height: "0" } },
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(24px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+        "float-y": {
+          "0%,100%": { transform: "translateY(0) rotateX(0) rotateY(0)" },
+          "50%": { transform: "translateY(-8px) rotateX(2deg) rotateY(-2deg)" },
+        },
+        "glow-pulse": {
+          "0%,100%": { textShadow: "0 0 8px hsl(var(--primary)/0.6), 0 0 18px hsl(var(--primary)/0.35)" },
+          "50%": { textShadow: "0 0 14px hsl(var(--primary)/0.9), 0 0 36px hsl(var(--primary)/0.55)" },
+        },
+        "scan-line": {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100vh)" },
+        },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        "tilt-3d": {
+          "0%,100%": { transform: "perspective(1000px) rotateX(0) rotateY(0)" },
+          "50%": { transform: "perspective(1000px) rotateX(3deg) rotateY(-3deg)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.7s cubic-bezier(0.22,1,0.36,1) both",
+        "float-y": "float-y 6s ease-in-out infinite",
+        "glow-pulse": "glow-pulse 3.5s ease-in-out infinite",
+        "scan-line": "scan-line 7s linear infinite",
+        "shimmer": "shimmer 3s linear infinite",
+        "tilt-3d": "tilt-3d 9s ease-in-out infinite",
       },
     },
   },

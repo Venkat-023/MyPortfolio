@@ -73,14 +73,14 @@ const Resume = () => {
                   <Sparkles className="w-4 h-4" />
                   AI Systems Engineer
                 </div>
-                <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground leading-tight">
-                  Venkat Baba
-                  <span className="block text-gradient-cyan">Yemineni</span>
+                <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground leading-tight animate-fade-in-up">
+                  <span className="text-3d block">Venkat Baba</span>
+                  <span className="block text-holo heading-scifi mt-2">Yemineni</span>
                 </h1>
                 <p className="mt-5 text-lg text-muted-foreground max-w-2xl leading-relaxed">
                   AI systems engineer building practical AI products with RAG, LLMs, agentic workflows, computer vision, APIs, and Dockerized deployments.
                 </p>
-                <p className="mt-4 text-xl md:text-2xl font-display font-bold text-gradient-orange">
+                <p className="mt-4 text-xl md:text-2xl font-display font-bold text-3d-accent">
                   Always learning, always improving, always building.
                 </p>
 
