@@ -40,7 +40,7 @@ const Achievements = () => {
       date: 'Apr 2026',
     },
     {
-      title: 'Built With AI Hackathon',
+      title: 'Build with Ai Hackathon',
       org: 'Unstop',
       result: 'Built DocOps-AI',
       description: 'Built DocOps-AI, an AI document operations project for document processing, extraction, summarization, and workflow assistance. Deployed on Hugging Face Spaces.',

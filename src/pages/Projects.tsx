@@ -38,11 +38,11 @@ const Projects = () => {
     },
     {
       title: 'DocOps-AI',
-      description: 'Built for the Built With AI Hackathon on Unstop: an AI document operations system for document processing, extraction, summarization, and workflow assistance. Deployed on Hugging Face Spaces.',
+      description: 'Built for the Build with Ai Hackathon on Unstop: an AI document operations system for document processing, extraction, summarization, and workflow assistance. Deployed on Hugging Face Spaces.',
       techStack: ['Python', 'AI', 'NLP', 'Hugging Face', 'Document AI'],
       github: 'https://github.com/Venkat-023/DocOps-AI',
       category: 'NLP',
-      highlight: 'Built With AI',
+      highlight: 'Build with Ai',
       demo: 'https://huggingface.co/spaces/Venkat-023/DocOps-AI',
     },
     {
