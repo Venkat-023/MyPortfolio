@@ -80,26 +80,41 @@ const Home = () => {
         <div className="absolute inset-0 -z-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.08)_0%,transparent_60%)] pointer-events-none" />
         <div className="container mx-auto px-4 py-20 md:py-28 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] text-foreground mb-6 animate-fade-in-up">
-            <span className="text-3d block">AI Systems Engineer</span>
-            <span className="text-holo block mt-3 heading-scifi">building AI/ML pipelines</span>
+          {/* The Lede — hackathon hook */}
+          <a
+            href="https://github.com/Venkat-023/Amazon_MachineLearning-Hackathon"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-accent/40 bg-accent/10 text-accent text-xs md:text-sm font-medium hover:bg-accent/20 transition-colors"
+          >
+            <Trophy size={14} />
+            Top 2% — Rank #1693 / 82,790 · Amazon ML Hackathon 2025
+            <ChevronRight size={14} />
+          </a>
+
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.05] text-foreground mb-6 animate-fade-in-up">
+            <span className="text-3d block">I build AI systems</span>
+            <span className="text-holo block mt-3 heading-scifi">that actually ship.</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
-            Deployed FastAPI-served models in Docker, trained on 2M+ samples, engineered end-to-end inference APIs. {leetcodeCount}+ LeetCode problems. {projectCount}+ AI/ML projects shipped.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-10">
+            Ranked in the <span className="text-accent font-semibold">top 2% of 82,790</span> in Amazon's ML Hackathon.
+            Built a real-time toxic-comment moderator on 2M+ samples with DistilBERT + FastAPI + Docker.
+            Trained dual CNNs hitting <span className="text-primary font-semibold">98.7%</span> for live driver-drowsiness
+            detection. Currently engineering applied AI as an intern at GoAi.
           </p>
 
           <div className="flex flex-wrap justify-center gap-3">
             <Link to="/projects">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground glow-cyan">
                 <Briefcase className="mr-2" size={20} />
-                View Projects
+                See Case Studies
               </Button>
             </Link>
             <a href="https://github.com/Venkat-023?tab=repositories" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="border-primary/50 text-primary hover:bg-primary/10">
                 <Github className="mr-2" size={20} />
-                GitHub
+                GitHub · 40 repos
               </Button>
             </a>
             <Link to="/resume">
@@ -110,16 +125,16 @@ const Home = () => {
             </Link>
           </div>
 
-          {/* Signal Strip */}
+          {/* Signal Strip — outcomes, not labels */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
             {[
-              { label: 'LeetCode Solved', value: `${leetcodeCount}+`, sub: 'Sustained algorithmic consistency' },
-              { label: 'AI/ML Projects', value: `${projectCount}+`, sub: 'REST APIs, Docker, AWS deployments' },
-              { label: 'Amazon ML Hack', value: '#1693', sub: 'of 82,790 (top ~2%)' },
-              { label: 'CodeWar IIT Ropar', value: '#3593', sub: 'of 32,000+ participants' },
+              { label: 'Amazon ML Hackathon', value: 'Top 2%', sub: '#1693 of 82,790 · SMAPE 51.4' },
+              { label: 'Driver Drowsiness CNN', value: '98.7%', sub: 'Real-time, <50ms / frame' },
+              { label: 'LeetCode Solved', value: `${leetcodeCount}+`, sub: 'Daily DSA consistency' },
+              { label: 'Shipped AI/ML Projects', value: `${projectCount}+`, sub: 'FastAPI · Docker · HF Spaces' },
             ].map((stat) => (
               <Tilt3D key={stat.label} max={12} scale={1.04}>
-                <div className="glass-card p-5 rounded-xl border border-border/50">
+                <div className="glass-card p-5 rounded-xl border border-border/50 h-full">
                   <p className="text-2xl md:text-3xl font-display font-bold text-primary">{stat.value}</p>
                   <p className="text-sm font-medium text-foreground mt-1">{stat.label}</p>
                   <p className="text-xs text-muted-foreground mt-0.5">{stat.sub}</p>
