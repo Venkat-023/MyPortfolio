@@ -37,16 +37,22 @@ const Experience = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
               {[
-                'Working on applied AI systems and model-backed product features.',
-                'Contributing across research, implementation, testing, and deployment support.',
-                'Building production-oriented AI workflows with clean engineering practices.',
-                'Applying ML/backend skills in a real paid internship environment.',
+                'Engineering applied AI features into a shipping product — training, evaluation, and inference-side work.',
+                'Owning end-to-end model workflows: data preparation, fine-tuning / training, evaluation harnesses, and packaging for deployment.',
+                'Building Python services around model endpoints with clean engineering practices — typed code, reproducible environments, version-controlled experiments.',
+                'Collaborating with the engineering team on integration, deployment support, and production reliability of AI components.',
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 p-4 rounded-xl bg-muted/30 border border-border/40">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                   <p className="text-sm text-muted-foreground leading-relaxed">{item}</p>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-6 p-4 rounded-xl bg-primary/5 border border-primary/20">
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                <span className="text-primary font-semibold">Tech stack in use:</span> Python, PyTorch / TensorFlow, FastAPI, Docker, Git-based experiment tracking. Specific product, metrics, and shipped features will be added here as the internship progresses and information becomes publicly shareable.
+              </p>
             </div>
           </div>
         </Tilt3D>
