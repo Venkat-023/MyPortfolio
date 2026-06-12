@@ -93,8 +93,8 @@ const Home = () => {
           </a>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.05] text-foreground mb-6 animate-fade-in-up">
-            <span className="text-3d block">I build AI systems</span>
-            <span className="text-holo block mt-3 heading-scifi">that actually ship.</span>
+            <span className="text-3d block">Venkat Baba</span>
+            <span className="text-holo block mt-3 heading-scifi">Yemineni</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-10">
