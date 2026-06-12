@@ -80,17 +80,6 @@ const Home = () => {
         <div className="absolute inset-0 -z-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.08)_0%,transparent_60%)] pointer-events-none" />
         <div className="container mx-auto px-4 py-20 md:py-28 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          {/* The Lede — hackathon hook */}
-          <a
-            href="https://github.com/Venkat-023/Amazon_MachineLearning-Hackathon"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-accent/40 bg-accent/10 text-accent text-xs md:text-sm font-medium hover:bg-accent/20 transition-colors"
-          >
-            <Trophy size={14} />
-            Top 2% — Rank #1693 / 82,790 · Amazon ML Hackathon 2025
-            <ChevronRight size={14} />
-          </a>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.05] text-foreground mb-6 animate-fade-in-up">
             <span className="text-3d block">Venkat Baba</span>
@@ -114,7 +103,7 @@ const Home = () => {
             <a href="https://github.com/Venkat-023?tab=repositories" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="border-primary/50 text-primary hover:bg-primary/10">
                 <Github className="mr-2" size={20} />
-                GitHub · 40 repos
+                GitHub
               </Button>
             </a>
             <Link to="/resume">
@@ -129,7 +118,6 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
             {[
               { label: 'Amazon ML Hackathon', value: 'Top 2%', sub: '#1693 of 82,790 · SMAPE 51.4' },
-              { label: 'Driver Drowsiness CNN', value: '98.7%', sub: 'Real-time, <50ms / frame' },
               { label: 'LeetCode Solved', value: `${leetcodeCount}+`, sub: 'Daily DSA consistency' },
               { label: 'Shipped AI/ML Projects', value: `${projectCount}+`, sub: 'FastAPI · Docker · HF Spaces' },
             ].map((stat) => (
