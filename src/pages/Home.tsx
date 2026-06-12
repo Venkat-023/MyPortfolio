@@ -103,7 +103,7 @@ const Home = () => {
             <a href="https://github.com/Venkat-023?tab=repositories" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="border-primary/50 text-primary hover:bg-primary/10">
                 <Github className="mr-2" size={20} />
-                GitHub · 40 repos
+                GitHub
               </Button>
             </a>
             <Link to="/resume">
@@ -118,7 +118,6 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
             {[
               { label: 'Amazon ML Hackathon', value: 'Top 2%', sub: '#1693 of 82,790 · SMAPE 51.4' },
-              { label: 'Driver Drowsiness CNN', value: '98.7%', sub: 'Real-time, <50ms / frame' },
               { label: 'LeetCode Solved', value: `${leetcodeCount}+`, sub: 'Daily DSA consistency' },
               { label: 'Shipped AI/ML Projects', value: `${projectCount}+`, sub: 'FastAPI · Docker · HF Spaces' },
             ].map((stat) => (
