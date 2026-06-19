@@ -54,10 +54,10 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['"Rajdhani"', 'system-ui', 'sans-serif'],
-        display: ['"Orbitron"', '"Rajdhani"', 'sans-serif'],
-        mono: ['"Share Tech Mono"', 'ui-monospace', 'monospace'],
-        hero: ['"Audiowide"', '"Orbitron"', 'sans-serif'],
+        sans: ['"Times New Roman"', 'Times', 'serif'],
+        display: ['"Times New Roman"', 'Times', 'serif'],
+        mono: ['"Times New Roman"', 'Times', 'serif'],
+        hero: ['"Times New Roman"', 'Times', 'serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

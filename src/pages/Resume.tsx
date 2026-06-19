@@ -238,6 +238,7 @@ const Resume = () => {
                 {[
                   'Ranked #1693 / 82,790 in Amazon AI Hackathon 2025.',
                   '900+ LeetCode challenges solved.',
+                  'Semifinalist, Vibethon - TechMate 2026 at PW Institute of Innovation.',
                   'Semifinalist, RIFT 26 - 24 Hour Hackathon by PhysicsWallah.',
                   'Semifinalist, Adivya 2.0 at IIT Ropar for SkillQuest AI.',
                   'Ranked #3593 among 32,000+ in CodeWar, IIT Ropar.',

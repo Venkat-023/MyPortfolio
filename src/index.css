@@ -71,7 +71,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Rajdhani', system-ui, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 400;
     letter-spacing: 0.015em;
     background:
@@ -98,7 +98,7 @@ All colors MUST be HSL.
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Orbitron', 'Rajdhani', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: none;
@@ -176,16 +176,16 @@ All colors MUST be HSL.
   }
 
   .heading-scifi {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 800;
     letter-spacing: 0.06em;
   }
   .text-hero {
-    font-family: 'Audiowide', 'Orbitron', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     letter-spacing: 0.03em;
   }
   .text-mono-tech {
-    font-family: 'Share Tech Mono', ui-monospace, monospace;
+    font-family: 'Times New Roman', Times, serif;
     letter-spacing: 0.05em;
   }
 
