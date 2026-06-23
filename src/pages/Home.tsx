@@ -119,6 +119,7 @@ const Home = () => {
             {[
               { label: 'Amazon ML Hackathon', value: 'Top 2%', sub: '#1693 of 82,790 · SMAPE 51.4' },
               { label: 'LeetCode Solved', value: `${leetcodeCount}+`, sub: 'Daily DSA consistency' },
+              { label: 'IIT Ropar CodeWar', value: '#3593', sub: 'Among 32,000+ coders' },
               { label: 'Shipped AI/ML Projects', value: `${projectCount}+`, sub: 'FastAPI · Docker · HF Spaces' },
             ].map((stat) => (
               <Tilt3D key={stat.label} max={12} scale={1.04}>
@@ -439,7 +440,7 @@ const Home = () => {
               <div className="flex items-start gap-4">
                 <Award className="w-8 h-8 text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-display font-bold text-lg text-foreground">CodeWar — IIT Ropar</p>
+                  <p className="font-display font-bold text-lg text-foreground">CodeWar - IIT Ropar Coding Contest</p>
                   <p className="text-secondary font-bold">Rank #3593 / 32,000+</p>
                   <p className="text-sm text-muted-foreground mt-1">National-level competitive programming contest on CodeChef.</p>
                 </div>
