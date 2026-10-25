@@ -25,28 +25,21 @@ const Achievements = () => {
 
   const hackathons = [
     {
-      title: 'Hackering 2.0 — Agentic AI Hackathon',
-      org: 'Hackering',
-      result: '4th Place — Team CodeBale',
-      description: '36-hour hackathon in the Agentic AI track (Marketing Campaigns problem). Built Looply — small business owners describe an offer in their own language, and Looply turns it into consistent marketing campaigns across WhatsApp, Instagram, Facebook, and more. Team of 4.',
-      date: '2026',
-      highlight: true,
-      link: 'https://looplyy.vercel.app',
-    },
-    {
-      title: 'AI Hackathon for Builders',
-      org: 'Gradient Learnings',
-      result: 'Certificate of Participation — Team AVIS',
-      description: 'Participated as Team AVIS, representing RV Institute of Technology and Management, Karnataka.',
-      date: '2026',
-    },
-    {
       title: 'Amazon ML Hackathon 2025',
       org: 'Amazon',
       result: 'Rank #1693 / 82,790',
       description: 'Product Price Prediction using ensemble ML methods. Final SMAPE Score: 51.4',
       date: 'Jan 2026',
       highlight: true,
+    },
+    {
+      title: 'Hackering 2.0 — Agentic AI Hackathon',
+      org: 'Hackering',
+      result: '4th Place — Team CodeBale',
+      description: 'Secured 4th place among 72+ teams in the Agentic AI track (Marketing Campaigns problem). Built Looply — small business owners describe an offer in their own language, and Looply turns it into consistent marketing campaigns across WhatsApp, Instagram, Facebook, and more. Team of 4.',
+      date: '2026',
+      highlight: true,
+      link: 'https://looplyy.vercel.app',
     },
     {
       title: 'CodeWar - IIT Ropar',
@@ -80,13 +73,6 @@ const Achievements = () => {
       description: 'Selected into the semifinals of Vibethon, a flagship TechMate 2026 building event for creators, innovators, and builders turning ideas into reality.',
       date: 'Jun 2026',
       highlight: true,
-    },
-    {
-      title: 'Artpark CodeForge Hackathon',
-      org: 'Indian Institute of Science (IISc)',
-      result: 'Participant',
-      description: 'Built CareerDNA - AI-Adaptive Onboarding Engine that parses resumes, identifies skill gaps, and generates personalized training pathways.',
-      date: 'Apr 2026',
     },
     {
       title: 'Build with Ai Hackathon',
@@ -123,6 +109,20 @@ const Achievements = () => {
       date: '2026',
       highlight: true,
       link: 'https://www.linkedin.com/posts/venkat-baba-yemineni-49a7612b4_awssummit-cloudcomputing-artificialintelligence-ugcPost-7454384782119018496-YLoc/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEuTA3YBtKXkRvQ4qp0EdqsKhy16Bz2w33k',
+    },
+    {
+      title: 'Artpark CodeForge Hackathon',
+      org: 'Indian Institute of Science (IISc)',
+      result: 'Participant',
+      description: 'Built CareerDNA - AI-Adaptive Onboarding Engine that parses resumes, identifies skill gaps, and generates personalized training pathways.',
+      date: 'Apr 2026',
+    },
+    {
+      title: 'AI Hackathon for Builders',
+      org: 'Gradient Learnings',
+      result: 'Certificate of Participation — Team AVIS',
+      description: 'Participated as Team AVIS, representing RV Institute of Technology and Management, Karnataka.',
+      date: '2026',
     },
     {
       title: 'Kharagpur Data Science Hackathon',

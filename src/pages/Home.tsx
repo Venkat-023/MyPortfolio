@@ -425,6 +425,17 @@ const Home = () => {
               </div>
             </div>
 
+            <a href="https://looplyy.vercel.app" target="_blank" rel="noopener noreferrer" className="glass-card p-6 rounded-2xl border border-primary/30 hover:border-primary/60 transition-all cursor-pointer">
+              <div className="flex items-start gap-4">
+                <Trophy className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <p className="font-display font-bold text-lg text-foreground">Hackering 2.0 — Agentic AI Hackathon</p>
+                  <p className="text-primary font-bold">4th Place among 72+ teams</p>
+                  <p className="text-sm text-muted-foreground mt-1">Built Looply in 36 hours — one offer description becomes consistent marketing campaigns across WhatsApp, Instagram, and Facebook. Try the live demo.</p>
+                </div>
+              </div>
+            </a>
+
             <div className="glass-card p-6 rounded-2xl border border-primary/30">
               <div className="flex items-start gap-4">
                 <Code2 className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
