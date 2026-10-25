@@ -8,55 +8,55 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Brighter sci-fi background */
-    --background: 232 38% 10%;
-    --foreground: 186 100% 95%;
+    /* Soft warm light background */
+    --background: 40 48% 96%;
+    --foreground: 25 35% 14%;
 
-    /* Neon cyan primary */
-    --primary: 186 100% 50%;
-    --primary-foreground: 240 30% 8%;
+    /* Terracotta primary */
+    --primary: 24 78% 46%;
+    --primary-foreground: 40 50% 98%;
     
-    /* Electric blue secondary */
-    --secondary: 214 100% 50%;
-    --secondary-foreground: 186 100% 95%;
+    /* Deep teal secondary */
+    --secondary: 190 45% 33%;
+    --secondary-foreground: 40 50% 98%;
     
-    /* Vibrant orange accent */
-    --accent: 14 100% 60%;
-    --accent-foreground: 240 30% 8%;
+    /* Warm amber accent */
+    --accent: 34 90% 48%;
+    --accent-foreground: 25 40% 12%;
     
-    /* Glass card styling */
-    --card: 232 30% 15%;
-    --card-foreground: 186 100% 95%;
+    /* Card styling */
+    --card: 42 55% 99%;
+    --card-foreground: 25 35% 14%;
     
     /* Muted elements */
-    --muted: 226 28% 18%;
-    --muted-foreground: 186 55% 78%;
+    --muted: 40 30% 91%;
+    --muted-foreground: 28 16% 38%;
     
     /* Borders and inputs */
-    --border: 186 55% 34%;
-    --input: 226 28% 18%;
-    --ring: 186 100% 50%;
+    --border: 32 24% 84%;
+    --input: 40 30% 90%;
+    --ring: 24 78% 46%;
     
     /* Other UI elements */
-    --popover: 232 30% 15%;
-    --popover-foreground: 186 100% 95%;
+    --popover: 42 55% 99%;
+    --popover-foreground: 25 35% 14%;
     
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84.2% 55%;
     --destructive-foreground: 210 40% 98%;
     
     --radius: 0.75rem;
 
-    /* Custom design tokens */
-    --neon-cyan: 186 100% 50%;
-    --electric-blue: 214 100% 50%;
-    --vibrant-orange: 14 100% 60%;
-    --deep-black: 240 20% 4%;
-    --glass-bg: 232 30% 15% / 0.55;
+    /* Custom design tokens (names kept for compatibility) */
+    --neon-cyan: 24 78% 46%;
+    --electric-blue: 190 45% 33%;
+    --vibrant-orange: 34 90% 48%;
+    --deep-black: 28 30% 22%;
+    --glass-bg: 42 55% 99% / 0.7;
     
-    /* Glow effects */
-    --glow-cyan: 0 0 20px hsl(186 100% 50% / 0.5);
-    --glow-blue: 0 0 20px hsl(214 100% 50% / 0.5);
-    --glow-orange: 0 0 20px hsl(14 100% 60% / 0.5);
+    /* Soft glows */
+    --glow-cyan: 0 4px 18px hsl(24 78% 46% / 0.22);
+    --glow-blue: 0 4px 18px hsl(190 45% 33% / 0.22);
+    --glow-orange: 0 4px 18px hsl(34 90% 48% / 0.22);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -75,15 +75,15 @@ All colors MUST be HSL.
     font-weight: 400;
     letter-spacing: 0.015em;
     background:
-      radial-gradient(circle at 12% 8%, hsl(var(--primary) / 0.18), transparent 32%),
-      radial-gradient(circle at 84% 12%, hsl(var(--accent) / 0.15), transparent 30%),
-      radial-gradient(circle at 50% 92%, hsl(var(--secondary) / 0.16), transparent 36%),
-      linear-gradient(135deg, hsl(232 40% 8%), hsl(225 38% 11%) 42%, hsl(236 36% 8%));
+      radial-gradient(circle at 12% 8%, hsl(var(--primary) / 0.08), transparent 32%),
+      radial-gradient(circle at 84% 12%, hsl(var(--accent) / 0.09), transparent 30%),
+      radial-gradient(circle at 50% 92%, hsl(var(--secondary) / 0.08), transparent 36%),
+      linear-gradient(135deg, hsl(42 55% 98%), hsl(38 45% 95%) 42%, hsl(44 50% 97%));
     background-attachment: fixed;
     position: relative;
   }
 
-  /* Subtle sci-fi grid overlay */
+  /* Subtle warm grid overlay */
   body::before {
     content: '';
     position: fixed;
@@ -91,8 +91,8 @@ All colors MUST be HSL.
     pointer-events: none;
     z-index: 0;
     background-image:
-      linear-gradient(hsl(var(--primary) / 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--primary) / 0.06) 1px, transparent 1px);
+      linear-gradient(hsl(var(--primary) / 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.045) 1px, transparent 1px);
     background-size: 56px 56px;
     mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
   }
@@ -107,41 +107,41 @@ All colors MUST be HSL.
 
 @layer utilities {
   .glass-card {
-    @apply bg-card/55 backdrop-blur-xl border border-border/60;
+    @apply bg-card/70 backdrop-blur-xl border border-border/70;
     background:
-      linear-gradient(135deg, hsl(var(--card) / 0.72), hsl(var(--muted) / 0.42)),
-      radial-gradient(circle at 18% 0%, hsl(var(--primary) / 0.12), transparent 32%),
-      radial-gradient(circle at 88% 12%, hsl(var(--accent) / 0.10), transparent 30%);
+      linear-gradient(135deg, hsl(var(--card) / 0.85), hsl(var(--muted) / 0.55)),
+      radial-gradient(circle at 18% 0%, hsl(var(--primary) / 0.07), transparent 32%),
+      radial-gradient(circle at 88% 12%, hsl(var(--accent) / 0.06), transparent 30%);
     box-shadow:
-      0 18px 60px hsl(var(--deep-black) / 0.4),
-      inset 0 1px 0 hsl(var(--foreground) / 0.08),
-      inset 0 -1px 0 hsl(var(--primary) / 0.10);
+      0 14px 44px hsl(var(--deep-black) / 0.10),
+      inset 0 1px 0 hsl(0 0% 100% / 0.65),
+      inset 0 -1px 0 hsl(var(--primary) / 0.06);
     transform-style: preserve-3d;
     transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease;
   }
   .glass-card:hover {
     transform: perspective(1200px) translateY(-4px) rotateX(2deg) rotateY(-2deg);
     box-shadow:
-      0 28px 80px hsl(var(--primary) / 0.22),
-      0 0 0 1px hsl(var(--primary) / 0.30),
-      inset 0 1px 0 hsl(var(--foreground) / 0.10);
+      0 22px 60px hsl(var(--primary) / 0.14),
+      0 0 0 1px hsl(var(--primary) / 0.20),
+      inset 0 1px 0 hsl(0 0% 100% / 0.7);
   }
 
-  .glow-cyan { box-shadow: 0 0 20px hsl(var(--neon-cyan) / 0.5); }
-  .glow-blue { box-shadow: 0 0 20px hsl(var(--electric-blue) / 0.5); }
-  .glow-orange { box-shadow: 0 0 20px hsl(var(--vibrant-orange) / 0.5); }
+  .glow-cyan { box-shadow: 0 4px 18px hsl(var(--neon-cyan) / 0.25); }
+  .glow-blue { box-shadow: 0 4px 18px hsl(var(--electric-blue) / 0.25); }
+  .glow-orange { box-shadow: 0 4px 18px hsl(var(--vibrant-orange) / 0.25); }
 
   .hover-lift {
     @apply transition-all duration-300 hover:-translate-y-2;
     box-shadow:
-      0 18px 50px hsl(var(--deep-black) / 0.28),
-      0 0 0 1px hsl(var(--primary) / 0.08);
+      0 14px 40px hsl(var(--deep-black) / 0.08),
+      0 0 0 1px hsl(var(--primary) / 0.06);
   }
   .hover-lift:hover {
     box-shadow:
-      0 26px 80px hsl(var(--primary) / 0.18),
-      0 14px 40px hsl(var(--deep-black) / 0.35),
-      0 0 0 1px hsl(var(--primary) / 0.22);
+      0 22px 56px hsl(var(--primary) / 0.12),
+      0 12px 30px hsl(var(--deep-black) / 0.10),
+      0 0 0 1px hsl(var(--primary) / 0.16);
   }
 
   .text-gradient-cyan {
@@ -155,24 +155,24 @@ All colors MUST be HSL.
   .text-3d {
     color: hsl(var(--foreground));
     text-shadow:
-      1px 1px 0 hsl(var(--primary) / 0.55),
-      2px 2px 0 hsl(var(--primary) / 0.45),
-      3px 3px 0 hsl(var(--primary) / 0.35),
-      4px 4px 0 hsl(var(--primary) / 0.25),
-      5px 5px 0 hsl(var(--primary) / 0.18),
-      6px 6px 14px hsl(var(--deep-black) / 0.7),
-      0 0 18px hsl(var(--primary) / 0.35);
+      1px 1px 0 hsl(var(--primary) / 0.40),
+      2px 2px 0 hsl(var(--primary) / 0.32),
+      3px 3px 0 hsl(var(--primary) / 0.24),
+      4px 4px 0 hsl(var(--primary) / 0.16),
+      5px 5px 0 hsl(var(--primary) / 0.10),
+      6px 6px 12px hsl(var(--deep-black) / 0.22),
+      0 0 14px hsl(var(--primary) / 0.18);
   }
   .text-3d-accent {
     color: hsl(var(--foreground));
     text-shadow:
-      1px 1px 0 hsl(var(--accent) / 0.55),
-      2px 2px 0 hsl(var(--accent) / 0.45),
-      3px 3px 0 hsl(var(--accent) / 0.35),
-      4px 4px 0 hsl(var(--accent) / 0.25),
-      5px 5px 0 hsl(var(--accent) / 0.18),
-      6px 6px 14px hsl(var(--deep-black) / 0.7),
-      0 0 18px hsl(var(--accent) / 0.35);
+      1px 1px 0 hsl(var(--accent) / 0.45),
+      2px 2px 0 hsl(var(--accent) / 0.36),
+      3px 3px 0 hsl(var(--accent) / 0.27),
+      4px 4px 0 hsl(var(--accent) / 0.18),
+      5px 5px 0 hsl(var(--accent) / 0.10),
+      6px 6px 12px hsl(var(--deep-black) / 0.22),
+      0 0 14px hsl(var(--accent) / 0.20);
   }
 
   .heading-scifi {
@@ -228,8 +228,8 @@ All colors MUST be HSL.
     animation: glow 2.5s ease-in-out infinite alternate;
   }
   @keyframes glow {
-    from { box-shadow: 0 0 10px hsl(var(--neon-cyan) / 0.3); }
-    to { box-shadow: 0 0 32px hsl(var(--neon-cyan) / 0.85); }
+    from { box-shadow: 0 4px 12px hsl(var(--neon-cyan) / 0.18); }
+    to { box-shadow: 0 4px 24px hsl(var(--neon-cyan) / 0.40); }
   }
 
   /* Scanline sweep used on hero sections */
@@ -238,7 +238,7 @@ All colors MUST be HSL.
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: linear-gradient(180deg, transparent, hsl(var(--primary) / 0.10) 50%, transparent);
+    background: linear-gradient(180deg, transparent, hsl(var(--primary) / 0.07) 50%, transparent);
     height: 120px;
     animation: scan-line 7s linear infinite;
   }

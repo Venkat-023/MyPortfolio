@@ -25,6 +25,22 @@ const Achievements = () => {
 
   const hackathons = [
     {
+      title: 'Hackering 2.0 — Agentic AI Hackathon',
+      org: 'Hackering',
+      result: '4th Place — Team CodeBale',
+      description: '36-hour hackathon in the Agentic AI track (Marketing Campaigns problem). Built Looply — small business owners describe an offer in their own language, and Looply turns it into consistent marketing campaigns across WhatsApp, Instagram, Facebook, and more. Team of 4.',
+      date: '2026',
+      highlight: true,
+      link: 'https://looplyy.vercel.app',
+    },
+    {
+      title: 'AI Hackathon for Builders',
+      org: 'Gradient Learnings',
+      result: 'Certificate of Participation — Team AVIS',
+      description: 'Participated as Team AVIS, representing RV Institute of Technology and Management, Karnataka.',
+      date: '2026',
+    },
+    {
       title: 'Amazon ML Hackathon 2025',
       org: 'Amazon',
       result: 'Rank #1693 / 82,790',
