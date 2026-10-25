@@ -237,6 +237,7 @@ const Resume = () => {
               <div className="space-y-4 text-sm text-muted-foreground">
                 {[
                   'Ranked #1693 / 82,790 in Amazon AI Hackathon 2025.',
+                  '4th Place among 72+ teams at Hackering 2.0 — built Looply, an Agentic AI marketing-campaign generator.',
                   '900+ LeetCode challenges solved.',
                   'Semifinalist, Vibethon - TechMate 2026 at PW Institute of Innovation.',
                   'Semifinalist, RIFT 26 - 24 Hour Hackathon by PhysicsWallah.',
