@@ -22,7 +22,7 @@ const ParticleBackground = () => {
     }> = [];
 
     const particleCount = 95;
-    const colors = ['rgba(0, 240, 255, 0.65)', 'rgba(70, 150, 255, 0.55)', 'rgba(255, 107, 53, 0.45)', 'rgba(130, 245, 255, 0.45)'];
+    const colors = ['rgba(205, 100, 60, 0.55)', 'rgba(70, 125, 130, 0.5)', 'rgba(222, 160, 75, 0.5)', 'rgba(180, 115, 100, 0.4)'];
 
     // Create particles
     for (let i = 0; i < particleCount; i++) {
@@ -36,7 +36,7 @@ const ParticleBackground = () => {
     }
 
     const animate = () => {
-      ctx.fillStyle = 'rgba(18, 22, 42, 0.08)';
+      ctx.fillStyle = 'rgba(250, 246, 238, 0.14)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((particle, i) => {
@@ -60,7 +60,7 @@ const ParticleBackground = () => {
 
           if (distance < 150) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(0, 240, 255, ${0.26 * (1 - distance / 150)})`;
+            ctx.strokeStyle = `rgba(205, 100, 60, ${0.20 * (1 - distance / 150)})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
