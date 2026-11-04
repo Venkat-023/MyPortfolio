@@ -28,6 +28,14 @@ const Projects = () => {
       demo: 'https://www.linkedin.com/posts/venkat-baba-yemineni-49a7612b4_driver-drowsiness-detection-using-cnn-ugcPost-7357011125185454082-OEYC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEuTA3YBtKXkRvQ4qp0EdqsKhy16Bz2w33k',
     },
     {
+      title: 'RVITM Mitra AI — Trilingual Campus Assistant',
+      description: 'Source-grounded college information assistant for RVITM: hybrid RAG (pgvector + lexical + RRF) over official documents with citations and calibrated abstention. Answers in English, Kannada, and Hindi with transliteration handling, plus an admin portal for document governance and audit logs. 96.2% groundedness and <1% unsupported hallucination on a 320-question multilingual benchmark.',
+      techStack: ['FastAPI', 'React', 'TypeScript', 'PostgreSQL', 'pgvector', 'RAG', 'Docker'],
+      github: 'https://github.com/Venkat-023/Mitra-Ai',
+      category: 'Full Stack ML',
+      highlight: 'Hybrid RAG · 96.2% Grounded',
+    },
+    {
       title: 'Insight Weaver - Scientific Discovery Copilot',
       description: 'Built for the Google Gemma 4 Hackathon: evidence-first scientific discovery copilot that turns PDFs into entities, knowledge graphs, GraphRAG answers, contradiction analysis, and testable hypotheses.',
       techStack: ['Gemma', 'Ollama', 'FastAPI', 'React', 'Docker', 'GraphRAG', 'ChromaDB'],
