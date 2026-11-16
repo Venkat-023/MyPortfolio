@@ -28,7 +28,7 @@ const Experience = () => {
                   <p className="text-primary font-semibold mt-1">Paid Internship</p>
                   <div className="inline-flex items-center gap-2 mt-4 px-3 py-1 rounded-full bg-muted/40 border border-border/50 text-sm text-muted-foreground">
                     <Calendar className="w-4 h-4 text-accent" />
-                    June 2026 - December 2026
+                    June 2026 - November 2026
                   </div>
                 </div>
               </div>

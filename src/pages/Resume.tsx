@@ -171,7 +171,7 @@ const Resume = () => {
               <div className="relative pl-6 border-l-2 border-accent/40">
                 <span className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-accent shadow-[0_0_18px_hsl(var(--accent)/0.8)]" />
                 <h3 className="text-xl font-semibold text-foreground">AI Intern - GoAi</h3>
-                <p className="text-sm text-muted-foreground mt-2">June 2026 - December 2026</p>
+                <p className="text-sm text-muted-foreground mt-2">June 2026 - November 2026</p>
                 <p className="mt-4 text-sm text-muted-foreground">
                   Applied AI work across LLM-backed features, agentic workflows, testing, and deployment support.
                 </p>
